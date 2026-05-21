@@ -1,12 +1,16 @@
 # AeroRAG
 
-A 30-day RAG (Retrieval-Augmented Generation) prototype built on aviation data.
+A 6-week RAG (Retrieval-Augmented Generation) prototype built on aviation data.
 The goal: ship a working **Flight Safety Co-pilot** that can answer pilot
 questions grounded in primary-source FAA documents, with cited evidence and
 zero hallucination tolerance.
 
-> Status: **Day 0 — scaffolding complete.** Building begins **June 1, 2026**.
-> Daily commits will land in this repo.
+> Status: **Scaffolding complete.** Building runs **May 22 – Jun 30, 2026**.
+> Cadence: **Mon–Fri only**, weekends off, ~28 weekdays total.
+> One commit per workday.
+
+See the full plan in [`ROADMAP.md`](./ROADMAP.md) or the polished
+[PDF summary](./docs/AeroRAG_Roadmap_May22-Jun30.pdf) (5 pages).
 
 ---
 
@@ -26,12 +30,11 @@ toy demos.
 
 ## Phased scope
 
-| Phase | Weeks | Data | Question shape |
+| Phase | Window | Data | Question shape |
 | --- | --- | --- | --- |
-| **1. Reg-RAG** | June 1–14 | FAR (14 CFR), AIM, PHAK PDFs | *"Can I fly VFR-on-top without an IFR clearance?"* |
-| **2. Incident-RAG** | June 15–21 | NTSB & NASA ASRS reports | *"Show me prior incidents involving icing on Cessna 172."* |
-| **3. Wx-RAG** | June 22–28 | Live METAR / TAF / PIREP | *"Decode KJFK 211851Z 18012G22KT…"* |
-| **4. Polish & ship** | June 29–30 | — | Deployable demo + write-up |
+| **1. Reg-RAG** | May 22 – Jun 12 (Wk 1–3) | FAR (14 CFR), AIM, PHAK PDFs | *"Can I fly VFR-on-top without an IFR clearance?"* |
+| **2. Incident-RAG** | Jun 15 – Jun 19 (Wk 4) | NTSB / ASRS reports | *"Show me prior incidents involving icing on Cessna 172."* |
+| **3. Wx-RAG & ship** | Jun 22 – Jun 30 (Wk 5–6) | Live METAR / TAF / PIREP | *"Decode KJFK 211851Z 18012G22KT…"* + deploy v0.1.0 |
 
 ## Architecture (target end-state)
 
@@ -117,12 +120,12 @@ AeroRAG/
 └── scripts/               ← helpers (incl. daily commit helper)
 ```
 
-## Daily discipline
+## Weekly discipline
 
-Every calendar day in June carries a single, scoped deliverable. See
-[`ROADMAP.md`](./ROADMAP.md) for the day-by-day plan and
-[`docs/daily_logs/`](./docs/daily_logs/) for the logbook of what actually
-shipped.
+Every Mon–Fri carries a small commit toward a single weekly outcome.
+Weekends are explicitly off. See [`ROADMAP.md`](./ROADMAP.md) for the
+weekly plan and [`docs/daily_logs/`](./docs/daily_logs/) for the logbook
+of what actually shipped each day.
 
 A helper is provided to streamline the daily commit ritual:
 
